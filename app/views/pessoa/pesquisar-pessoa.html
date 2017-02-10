@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisar Pessoa</title>
+
+    <script src="pesquisar-pessoa.controle.js"></script>
+
+</head>
+<body ng-app="wmApp">
+<div ng-controller="PesquisarPessoaControle as vm">
+    <form name="formPesquisar">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Pesquisar Pessoas
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div ui-grid="gridPessoas"
+                                 ng-if="(listaPessoa.length > 0)"
+                                 ui-grid-selection></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <button ng-click="vm.novo()" class="btn btn-primary">
+                                <i class="fa fa-newspaper-o"></i>
+                                Novo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

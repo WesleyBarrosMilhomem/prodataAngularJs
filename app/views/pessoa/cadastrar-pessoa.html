@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Pessoa</title>
+
+    <script src="cadastrar-pessoa.controle.js"></script>
+
+</head>
+<body ng-app="wmApp">
+<div ng-controller="CadastrarPessoaControle as vm">
+    <form name="formCadastro">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Cadastrar Pessoas
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <wm-input-text
+                            label="Nome"
+                            ng-model="pessoa.nome"
+                            colspan="4"
+                            ng-required="true">
+                    </wm-input-text>
+
+                    <wm-input-text
+                            label="Sobrenome"
+                            ng-model="pessoa.sobrenome"
+                            colspan="4"
+                            ng-required="true">
+                    </wm-input-text>
+
+                    <wm-select label="Sexo"
+                               ng-model="pessoa.sexo"
+                               ng-required="true"
+                               colspan="2"
+                               provider="vm.sexo">
+                    </wm-select>
+
+                    <wm-input-text
+                            label="Data Nascimento"
+                            ng-model="pessoa.dataNascimento"
+                            colspan="2"
+                            tipo="date"
+                            ng-required="true">
+                    </wm-input-text>
+
+                </div>
+                <div class="row">
+                    <wm-input-text
+                            label="Cep"
+                            ng-blur="vm.pesquisaCep()"
+                            ng-model="pessoa.cep"
+                            colspan="2"
+                            ng-required="true">
+                    </wm-input-text>
+                    <wm-input-text
+                            label="Endereço"
+                            ng-model="pessoa.endereco"
+                            colspan="5"
+                            ng-required="true">
+                    </wm-input-text>
+                    <wm-input-text
+                            label="Bairro"
+                            ng-model="pessoa.bairro"
+                            colspan="2"
+                            ng-required="true">
+                    </wm-input-text>
+                    <wm-input-text
+                            label="Cidade"
+                            ng-model="pessoa.cidade"
+                            colspan="2"
+                            ng-required="true">
+                    </wm-input-text>
+                    <wm-input-text
+                            label="UF"
+                            ng-model="pessoa.estado"
+                            colspan="1"
+                            ng-required="true">
+                    </wm-input-text>
+                </div>
+                <div class="row">
+                    <wm-input-text
+                            label="Email"
+                            ng-model="pessoa.email"
+                            colspan="4"
+                            tipo="email"
+                            ng-required="true">
+                    </wm-input-text>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button class="btn btn-primary" ng-click="vm.salvar()">
+                                <i class="fa fa-save"></i>
+                                Salvar
+                            </button>
+                            <button class="btn btn-warning" ng-click="vm.novo()">
+                                <i class="fa fa-newspaper-o"></i>
+                                Novo
+                            </button>
+                            <button class="btn btn-danger" ng-click="vm.excluir()">
+                                <i class="fa fa-trash"></i>
+                                Excluir
+                            </button>
+                            <button class="btn btn-info" ng-click="vm.pesquisar()">
+                                <i class="fa fa-search"></i>
+                                Pesquisar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PESSOAS</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+    <script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.js"></script>
+
+    <script src="app/config/modulos-app.js"></script>
+    <script src="app/config/rotas-app.js"></script>
+    <script src="app/service/roteador.service.js"></script>
+    <script src="app/views/pessoa/pessoa.service.js"></script>
+    <script src="app/controller/index-controle.js"></script>
+    <script src="componentes/directives/wm-input-text/input-text.directive.js"></script>
+    <script src="componentes/directives/wm-select/select.directive.js"></script>
+
+</head>
+<body ng-app="wmApp" ng-controller="IndexControle as vm" class="container">
+<div ui-view></div>
+</body>
+</html>
